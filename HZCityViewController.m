@@ -86,7 +86,7 @@
     self.title = @"选择城市";
     //添加searchBar
     [self.view addSubview:self.searchBar];
-    
+    self.searchCityTableview.tableFooterView = [[UIView alloc] init];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getcityName:) name:@"getCityNameNotification" object:nil];
     self.arrayHotCity = [NSMutableArray arrayWithObjects:@"广州市",@"北京市",@"天津市",@"西安市",@"重庆市",@"沈阳市",@"青岛市",@"济南市",@"深圳市",@"长沙市",@"无锡市", nil];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"cancel"] style:UIBarButtonItemStylePlain target:self action:@selector(cancelClick)];
